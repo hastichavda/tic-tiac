@@ -12,10 +12,10 @@ function selectWinnerBoxes(b1,b2,b3){
    turn.style.fontSize = "40px";
 
    count=0;
-   replay();
+   
 
 }
-
+replay();
 
 
 function getWinner(){
