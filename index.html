@@ -4,22 +4,58 @@
         <meta charset="UTF-8">
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="style.css">
+      
     </head>
     <body>
             <div class="title">Tic Tac Toe</div>
+
+            <!-- player name and choosing color -->
+            <div class="players">
+                <h4>Enter your name and choose color </h4>
+                <p>
+                    Player-1 
+                    <input type="text" id="p1-name" value="player one">
+                    <select id="p1-bg">
+                            <option value="#CCCCFF" selected="selected">Light Blue</option>
+                            <option value="#FFCCCC">Light Red</option>
+                            <option value="#660000">Brown</option>
+                            <option value="#99CCFF">Sky Blue</option>
+                            <option value="#CCFFCC">Light Green</option>
+                            <option value="#FFCCFF">Pink</option>
+                    </select>
+                </p>  
+                <p>
+                    Player-2
+                    <input type="text" id="p2-name" value="player two">
+                    <select id="p2-bg">
+                            <option value="#CCCCFF" selected="selected">Light Blue</option>
+                            <option value="#FFCCCC">Light Red</option>
+                            <option value="#660000">Brown</option>
+                            <option value="#99CCFF">Sky Blue</option>
+                            <option value="#CCFFCC">Light Green</option>
+                            <option value="#FFCCFF">Pink</option>
+                    </select>
+                </p>
+                <p>
+                        <button class="btn"  onClick="startGame()">Start Game</button>
+                </p>
+            </div>
+
+            <!-- strating of game -->
+           
             <div class="container" id="main">
-            <span id="turn"> Play </span>
-            <div class="box" id="box1"></div>
-            <div class="box" id="box2"></div>
-            <div class="box" id="box3"></div>
-            <div class="box" id="box4"></div>
-            <div class="box" id="box5"></div>
-            <div class="box" id="box6"></div>
-            <div class="box" id="box7"></div>
-            <div class="box" id="box8"></div>
-            <div class="box" id="box9"></div>
-        </div>
-        <button onclick="replay()">Replay</button>
+                <span id="turn"> Play </span>
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+                <div class="box" id="box4"></div>
+                <div class="box" id="box5"></div>
+                <div class="box" id="box6"></div>
+                <div class="box" id="box7"></div>
+                <div class="box" id="box8"></div>
+                <div class="box" id="box9"></div>
+                <button onclick="replay()">Replay</button>
+            </div>
         <script src="tictac.js"></script>
     </body>
 </html>

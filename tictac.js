@@ -3,6 +3,12 @@ var turn = document.getElementById("turn"),
 // X_or_O => to set X or O into the box
    boxes = document.querySelectorAll("#main div"), X_or_O = 0;
   var  count = 0;
+   
+  function dgi(a){
+   return document.getElementById(a);
+  }
+      dgi('p1-name').innerHTML = name;
+		dgi('p2-name').innerHTML = name;
 
 function selectWinnerBoxes(b1,b2,b3){
    b1.classList.add("win");
@@ -10,10 +16,7 @@ function selectWinnerBoxes(b1,b2,b3){
    b3.classList.add("win");
    turn.innerHTML = b1.innerHTML + " Won Congrats";
    turn.style.fontSize = "40px";
-
    count=0;
-   
-
 }
 replay();
 
@@ -72,32 +75,56 @@ for(var i = 0; i < boxes.length; i++){
        if(X_or_O%2 === 0){
           console.log(X_or_O);
           this.innerHTML = "X"; 
-          turn.innerHTML = "O Turn Now";
+          this.style.backgroundColor = document.getElementById('p1-bg').value;
+          turn.innerHTML = document.getElementById('p2-name').value + " Turn Now";
           getWinner();
           X_or_O += 1;
           
        }else{
            console.log(X_or_O);
           this.innerHTML = "O";
-          turn.innerHTML = "X Turn Now";
+          this.style.backgroundColor = document.getElementById('p2-bg').value;
+          turn.innerHTML = document.getElementById('p1-name').value + " Turn Now";
           getWinner();
           X_or_O += 1;  
        }
    }
 
 
-   };
+   }; 
    
 }
 
+function startGame(ele) {
+   var cont = document.getElementById('main');
+   if (cont.style.display == 'block') {
+       cont.style.display = 'none';
+   }
+   else {
+       cont.style.display = 'block';
+   }
+}
+ 
+ 
+
 function replay(){
-   
+   var cont = document.getElementById('main');
+   if (cont.style.display == 'none') {
+      cont.style.display = 'block';
+  }
+  else {
+      cont.style.display = 'none';
+  }
+
    for(var i = 0; i < boxes.length; i++){
        boxes[i].classList.remove("win");
        boxes[i].innerHTML = "";
-       turn.innerHTML = "Play";
+       boxes[i].style.backgroundColor = "#fff";
+       turn.innerHTML = document.getElementById('p1-name').value + " Turn Now";
        turn.style.fontSize = "25px";
-       
+   
+      
    }
    
 }
+
