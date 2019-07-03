@@ -5,7 +5,6 @@
     width:300px;
     overflow:hidden;
     margin: 50px auto 0 auto;
-    
 }
 .container span{
     widows: 100%;
@@ -42,7 +41,7 @@ button{
     width:200px;
     height:40px;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 .win{
     background : orange;
@@ -58,12 +57,12 @@ button{
 }
 .players{
     margin: 30px 0 30px 35%;
-    padding: 5px;
+    /* padding: 5px; */
     border:1px solid rosybrown;
     width:30%;
     align-items: center;
     background-color:rgb(224, 215, 81);
-    display: block;
+   
 }
 .btn{
     padding: 5px;

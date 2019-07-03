@@ -14,9 +14,10 @@
                 <h4>Enter your name and choose color </h4>
                 <p>
                     Player-1 
-                    <input type="text" id="p1-name" value="player one">
-                    <select id="p1-bg">
-                            <option value="#CCCCFF" selected="selected">Light Blue</option>
+                    <input type="text" id="p1-name" value="player one" onClick="this.select()" onChange="setPlayerName(1, this.value)">
+                    <select name="dropdown1" id="p1-bg"  onChange="setPlayerColor(1, this.value);">
+                            <option>color</option>
+                            <option value="#CCCCFF" >Light Blue</option>
                             <option value="#FFCCCC">Light Red</option>
                             <option value="#660000">Brown</option>
                             <option value="#99CCFF">Sky Blue</option>
@@ -26,9 +27,10 @@
                 </p>  
                 <p>
                     Player-2
-                    <input type="text" id="p2-name" value="player two">
-                    <select id="p2-bg">
-                            <option value="#CCCCFF" selected="selected">Light Blue</option>
+                    <input type="text" id="p2-name" value="player two" onClick="this.select()" onChange="setPlayerName(2, this.value)">
+                    <select name="dropdown2"  id="p2-bg"  onChange="setPlayerColor(2, this.value);">
+                            <option>color</option>
+                            <option value="#CCCCFF" >Light Blue</option>
                             <option value="#FFCCCC">Light Red</option>
                             <option value="#660000">Brown</option>
                             <option value="#99CCFF">Sky Blue</option>
@@ -37,12 +39,13 @@
                     </select>
                 </p>
                 <p>
-                        <button class="btn"  onClick="startGame()">Start Game</button>
+                        <button class="btn" id="startbutton" onClick="startGame()">Start Game</button>
                 </p>
+                <p id="errBox" style="color: red;"></p>            
             </div>
 
             <!-- strating of game -->
-           
+          
             <div class="container" id="main">
                 <span id="turn"> Play </span>
                 <div class="box" id="box1"></div>
@@ -54,8 +57,14 @@
                 <div class="box" id="box7"></div>
                 <div class="box" id="box8"></div>
                 <div class="box" id="box9"></div>
+                
                 <button onclick="replay()">Replay</button>
             </div>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+            
         <script src="tictac.js"></script>
     </body>
 </html>
